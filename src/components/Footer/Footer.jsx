@@ -1,0 +1,58 @@
+import React from 'react';
+import styles from './Footer.module.css';
+
+const Footer = () => (
+  <footer className={styles.footer}>
+    <div className={styles.container}>
+      <div className={styles.col}>
+        <a href="/" className={styles.brand} aria-label="NepSYS Home">
+          <span className={styles.logoIcon}>🌀</span>
+          <span className={styles.brandName}>NepSYS</span>
+        </a>
+        <p className={styles.desc}>
+          Empowering businesses across Nepal with cutting-edge software solutions.<br />
+          From school management to e-commerce platforms, we deliver excellence.
+        </p>
+        <div className={styles.socials}>
+          <a href="#" aria-label="Facebook"><svg height="20" width="20"><circle cx="10" cy="10" r="9" fill="#b71c1c" /></svg></a>
+          <a href="#" aria-label="Twitter"><svg height="20" width="20"><circle cx="10" cy="10" r="9" fill="#b71c1c" /></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg height="20" width="20"><circle cx="10" cy="10" r="9" fill="#b71c1c" /></svg></a>
+          <a href="#" aria-label="Instagram"><svg height="20" width="20"><circle cx="10" cy="10" r="9" fill="#b71c1c" /></svg></a>
+        </div>
+      </div>
+      <div className={styles.col}>
+        <div className={styles.heading}>Our Services</div>
+        <ul className={styles.links}>
+          <li>School ERP Systems</li>
+          <li>Travel Booking Platforms</li>
+          <li><b>E-commerce Solutions</b></li>
+          <li>Industrial Training</li>
+          <li>Custom Software Development</li>
+        </ul>
+      </div>
+      <div className={styles.col}>
+        <div className={styles.heading}>Quick Links</div>
+        <ul className={styles.links}>
+          <li>About Us</li>
+          <li>Training Programs</li>
+          <li>Client Portal</li>
+          <li>Contact Us</li>
+          <li>Admin Panel</li>
+        </ul>
+      </div>
+      <div className={styles.col}>
+        <div className={styles.heading}>Contact Us</div>
+        <ul className={styles.contact}>
+          <li><span role="img" aria-label="Location">📍</span> Kathmandu, Nepal</li>
+          <li><span role="img" aria-label="Phone">📞</span> +977-1-4123456</li>
+          <li><span role="img" aria-label="Email">✉️</span> info@nepsys.com</li>
+        </ul>
+      </div>
+    </div>
+    <div className={styles.bottom}>
+      &copy; {new Date().getFullYear()} NepSYS. All rights reserved. Built with excellence in Nepal.
+    </div>
+  </footer>
+);
+
+export default Footer;

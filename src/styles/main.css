@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: #fafafa;
+  color: #111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  margin: 0;
+}
+
+a {
+  color: #b71c1c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
