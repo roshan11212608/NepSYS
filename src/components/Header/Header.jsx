@@ -11,7 +11,7 @@ const Header = () => (
         className={styles.logoImg}
         height={48}
       />
-      <span className={styles.logoText}>NepSYS</span>
+      <span className={styles.logoText}>NepSoS</span>
     </a>
     {/* Navigation */}
     <nav className={styles.nav} aria-label="Main Navigation">

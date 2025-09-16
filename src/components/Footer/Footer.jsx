@@ -5,10 +5,15 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.container}>
       <div className={styles.col}>
-        <a href="/" className={styles.brand} aria-label="NepSYS Home">
-          <span className={styles.logoIcon}>🌀</span>
-          <span className={styles.brandName}>NepSYS</span>
-        </a>
+        <a href="/" className={styles.logo} aria-label="NepSYS Home">
+              <img
+                src={require('./img/loo.png')}
+                alt="NepSYS Logo"
+                className={styles.logoImg}
+                height={48}
+              />
+              <span className={styles.logoText}>NepSYS</span>
+            </a>
         <p className={styles.desc}>
           Empowering businesses across Nepal with cutting-edge software solutions.<br />
           From school management to e-commerce platforms, we deliver excellence.
