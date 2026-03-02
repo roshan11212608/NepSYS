@@ -12,7 +12,7 @@ const Footer = () => (
             className={styles.logoImg}
             height={48}
           />
-          <span className={styles.logoText}>NEXA</span>
+          <span className={styles.logoText}>NEXA_Nepal</span>
         </a>
         <p className={styles.desc}>
           Empowering businesses across Nepal with cutting-edge software
