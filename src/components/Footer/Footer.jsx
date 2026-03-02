@@ -72,7 +72,7 @@ const Footer = () => (
           <li>School ERP Systems</li>
           <li>Travel Booking Platforms</li>
           <li>
-            <b>E-commerce Solutions</b>
+            <b>E-commerce Solutions and Swari Sewa</b>
           </li>
           <li>Industrial Training</li>
           <li>Custom Software Development</li>
