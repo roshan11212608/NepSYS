@@ -1,5 +1,5 @@
 .about {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #0B1F3A 0%, #071426 100%);
   color: #FFFFFF;
@@ -7,11 +7,6 @@
   margin: 0;
   position: relative;
   overflow-x: hidden;
-}
-.about h2 {
-  color: #b71c1c;
-  margin-bottom: 1rem;
-  font-size: 2rem;
 }
 
 /* About Page - Matching Services SaaS Theme - Full Width */
@@ -109,65 +104,61 @@
   transform: translateX(0);
 }
 
-/* Company Introduction - Full Width */
-.companyIntro {
-  margin-bottom: 4rem;
-  padding: 4rem 2rem;
-  width: 100%;
-}
-
+/* Section Titles - Centered */
 .sectionTitle {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   background: linear-gradient(90deg, #2F80ED, #00C2FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   filter: drop-shadow(0 0 20px rgba(47, 128, 237, 0.3));
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.introContent {
+/* Company Introduction - Card Style */
+.companyIntro {
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.companyIntro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(47, 128, 237, 0.05) 50%, transparent 70%);
+  z-index: -1;
+}
+
+.introGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-top: 2rem;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
-.introText {
-  font-size: 1.1rem;
-  color: #AAB3C5;
-  line-height: 1.7;
-}
-
-.introText p {
-  margin-bottom: 1.5rem;
-}
-
-.introVisual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.statsCard {
+.introCard {
   background: rgba(7, 20, 38, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(47, 128, 237, 0.2);
   border-radius: 20px;
   padding: 2.5rem;
-  text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
-.statsCard::before {
+.introCard::before {
   content: '';
   position: absolute;
   top: 0;
@@ -179,42 +170,72 @@
   transition: transform 0.3s ease;
 }
 
-.statsCard:hover::before {
+.introCard:hover::before {
   transform: translateX(0);
 }
 
-.statsCard:hover {
+.introCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(47, 128, 237, 0.3);
   border-color: rgba(47, 128, 237, 0.4);
 }
 
-.statsNumber {
-  font-size: 2.5rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #2F80ED, #00C2FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  background: rgba(47, 128, 237, 0.1);
+  border: 2px solid rgba(47, 128, 237, 0.3);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
 }
 
-.statsLabel {
-  color: #AAB3C5;
-  font-size: 1rem;
+.introCard:hover .cardIcon {
+  background: rgba(47, 128, 237, 0.2);
+  border-color: #2F80ED;
+  box-shadow: 0 0 30px rgba(47, 128, 237, 0.3);
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
   font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardDescription {
+  color: #AAB3C5;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 /* Core Values Section - Full Width */
 .coreValues {
-  margin-bottom: 4rem;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.coreValues::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(47, 128, 237, 0.05) 50%, transparent 70%);
+  z-index: -1;
 }
 
 .valuesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   max-width: none;
@@ -291,9 +312,20 @@
 
 /* Team Section - Full Width */
 .teamSection {
-  margin-bottom: 4rem;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.teamSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(47, 128, 237, 0.05) 50%, transparent 70%);
+  z-index: -1;
 }
 
 .teamGrid {
@@ -450,13 +482,18 @@
     padding: 1.5rem;
   }
   
-  .introContent {
+  .introGrid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .introCard {
+    padding: 2rem;
   }
   
   .valuesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   
   .teamGrid {
@@ -469,5 +506,19 @@
   
   .ctaTitle {
     font-size: 1.8rem;
+  }
+  
+  .aboutHero,
+  .companyIntro,
+  .coreValues,
+  .teamSection,
+  .ctaSection {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
   }
 }

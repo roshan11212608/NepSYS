@@ -57,10 +57,10 @@ const Header = () => {
               <a href="/about" className={styles.navLink} onClick={closeMenu}>About</a>
             </li>
             <li className={styles.navItem}>
-              <a href="/#process" className={styles.navLink} onClick={closeMenu}>Process</a>
+              <a href="/process" className={styles.navLink} onClick={closeMenu}>Process</a>
             </li>
             <li className={styles.navItem}>
-              <a href="/#tech" className={styles.navLink} onClick={closeMenu}>Tech Stack</a>
+              <a href="/tech" className={styles.navLink} onClick={closeMenu}>Tech Stack</a>
             </li>
             <li className={styles.navItem}>
               <a href="/#testimonials" className={styles.navLink} onClick={closeMenu}>Testimonials</a>

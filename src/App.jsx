@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing/Landing';
 import Services from './pages/Services/Services';
 import About from './pages/About/About';
+import Process from './pages/Process/Process';
+import Tech from './pages/Tech/Tech';
 import Contact from './pages/Contact/Contact';
 import './styles/main.css';
 
@@ -12,6 +14,8 @@ const App = () => (
       <Route path="/" element={<Landing />} />
       <Route path="/services" element={<Services />} />
       <Route path="/about" element={<About />} />
+      <Route path="/process" element={<Process />} />
+      <Route path="/tech" element={<Tech />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   </Router>

@@ -24,23 +24,43 @@ const About = () => {
           {/* Company Introduction */}
           <section className={styles.companyIntro}>
             <h2 className={styles.sectionTitle}>Who We Are</h2>
-            <div className={styles.introContent}>
-              <div className={styles.introText}>
-                <p>
-                  <strong>NEXA</strong> is a cutting-edge digital engineering company that transforms businesses through innovative technology solutions. We combine creativity with technical excellence to deliver exceptional digital experiences.
-                </p>
-                <p>
-                  Our expert team of developers, designers, and consultants work collaboratively to build solutions that not only meet your current needs but anticipate future challenges. We're passionate about pushing the boundaries of what's possible in digital innovation.
-                </p>
-                <p>
-                  With a proven track record of success across diverse industries, we've become the trusted partner for businesses seeking to leverage technology for competitive advantage. Our commitment to excellence ensures every project delivers measurable results.
+            <div className={styles.introGrid}>
+              <div className={styles.introCard}>
+                <div className={styles.cardIcon}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#00C2FF" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3 className={styles.cardTitle}>Innovation Driven</h3>
+                <p className={styles.cardDescription}>
+                  <strong>NEXA</strong> is a digital engineering company that transforms businesses through innovative technology solutions. We combine creativity with technical excellence to deliver exceptional digital experiences.
                 </p>
               </div>
-              <div className={styles.introVisual}>
-                <div className={styles.statsCard}>
-                  <div className={styles.statsNumber}>500+</div>
-                  <div className={styles.statsLabel}>Happy Clients</div>
+
+              <div className={styles.introCard}>
+                <div className={styles.cardIcon}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#00C2FF" strokeWidth="2"/>
+                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#00C2FF" strokeWidth="2"/>
+                  </svg>
                 </div>
+                <h3 className={styles.cardTitle}>Expert Team</h3>
+                <p className={styles.cardDescription}>
+                  Our expert team works collaboratively to build solutions that meet your needs and anticipate future challenges. We're passionate about pushing the boundaries of what's possible in digital innovation.
+                </p>
+              </div>
+
+              <div className={styles.introCard}>
+                <div className={styles.cardIcon}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1212 8.53447 21.3726C6.51168 20.6239 4.78465 19.2402 3.61096 17.4299C2.43727 15.6196 1.87979 13.4818 2.02168 11.3313C2.16356 9.18079 2.99721 7.13129 4.39828 5.49104C5.79935 3.85079 7.69279 2.70744 9.79619 2.23182C11.8996 1.7562 14.1003 1.97206 16.07 2.85" stroke="#00C2FF" strokeWidth="2"/>
+                    <path d="M22 4L12 14.01L9 11.01" stroke="#00C2FF" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3 className={styles.cardTitle}>Proven Results</h3>
+                <p className={styles.cardDescription}>
+                  With a proven track record of success, we've become the trusted partner for businesses seeking to leverage technology for competitive advantage. Our commitment to excellence ensures measurable results.
+                </p>
               </div>
             </div>
           </section>
