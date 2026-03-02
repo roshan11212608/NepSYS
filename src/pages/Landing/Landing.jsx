@@ -12,7 +12,7 @@ const Landing = () => {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <h1 className={styles.heroTitle}>Smart Digital Engineering</h1>
+            <h1 className={styles.heroTitle}>Smart DDigital Engineering</h1>
             <p className={styles.heroSubtitle}>
               Building scalable software solutions for modern businesses.
             </p>

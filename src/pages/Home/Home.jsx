@@ -10,7 +10,7 @@ const Home = () => (
     <main className={styles.heroMain}>
       <section className={styles.heroSection}>
         {/* <img src={logo} alt="NepSYoS Logo" className={styles.logo} /> */}
-        <h1 className={styles.heroTitle}>Smart Digital Engineering</h1>
+        <h1 className={styles.heroTitle}>Smartt Digital Engineering</h1>
         <p className={styles.heroSubtitle}>
           Nexa delivers scalable, secure, and intelligent digital solutions designed for modern businesses. From software development to cloud solutions, we transform your digital infrastructure.
         </p>
