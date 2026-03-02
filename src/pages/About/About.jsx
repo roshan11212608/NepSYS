@@ -27,24 +27,19 @@ const About = () => {
             <div className={styles.introContent}>
               <div className={styles.introText}>
                 <p>
-                  NEXA is a premier digital engineering company founded on principles of innovation, security, and scalability. 
-                  We specialize in creating cutting-edge software solutions that empower businesses to thrive in the digital age.
+                  <strong>NEXA</strong> is a cutting-edge digital engineering company that transforms businesses through innovative technology solutions. We combine creativity with technical excellence to deliver exceptional digital experiences.
                 </p>
                 <p>
-                  Our team of expert developers, designers, and consultants work collaboratively to deliver solutions that not only 
-                  meet your current needs but also anticipate future challenges. We believe in building long-term partnerships 
-                  with our clients, ensuring their success is our success.
+                  Our expert team of developers, designers, and consultants work collaboratively to build solutions that not only meet your current needs but anticipate future challenges. We're passionate about pushing the boundaries of what's possible in digital innovation.
                 </p>
                 <p>
-                  Since our inception, we have helped numerous businesses across various industries transform their operations, 
-                  improve efficiency, and achieve their digital transformation goals. Our commitment to excellence and innovation 
-                  has made us a trusted partner for companies seeking to leverage technology for competitive advantage.
+                  With a proven track record of success across diverse industries, we've become the trusted partner for businesses seeking to leverage technology for competitive advantage. Our commitment to excellence ensures every project delivers measurable results.
                 </p>
               </div>
               <div className={styles.introVisual}>
                 <div className={styles.statsCard}>
-                  <div className={styles.statsNumber}>150+</div>
-                  <div className={styles.statsLabel}>Projects Delivered</div>
+                  <div className={styles.statsNumber}>500+</div>
+                  <div className={styles.statsLabel}>Happy Clients</div>
                 </div>
               </div>
             </div>
