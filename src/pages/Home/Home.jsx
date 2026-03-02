@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import logo from '../../components/Header/img/nepsys-logo.jpg';
+import logo from '../../components/Header/img/loo.png';
 import styles from './Home.module.css';
 
 const Home = () => (
@@ -10,9 +10,9 @@ const Home = () => (
     <main className={styles.heroMain}>
       <section className={styles.heroSection}>
         {/* <img src={logo} alt="NepSYoS Logo" className={styles.logo} /> */}
-        <h1 className={styles.heroTitle}>Empowering Nepal with <br />Digital Excellence</h1>
+        <h1 className={styles.heroTitle}>Smart Digital Engineering</h1>
         <p className={styles.heroSubtitle}>
-          From school management systems to e-commerce platforms, we deliver cutting-edge software solutions that transform businesses across Nepal and beyond.
+          Nexa delivers scalable, secure, and intelligent digital solutions designed for modern businesses. From software development to cloud solutions, we transform your digital infrastructure.
         </p>
         <div className={styles.heroButtons}>
           <a href="/services" className={styles.cta}>Explore Our Services</a>
@@ -27,25 +27,25 @@ const Home = () => (
         <div className={styles.stat}><span>24/7</span><br />Support</div>
       </section>
 
-      {/* Why Choose NepSYS Section */}
+      {/* Why Choose NEXA Section */}
       <section className={styles.whySection}>
-        <h2 className={styles.whyTitle}>Why Choose NepSYS?</h2>
-        <p className={styles.whySubtitle}>We combine local expertise with global standards to deliver exceptional results.</p>
+        <h2 className={styles.whyTitle}>Why Choose NEXA?</h2>
+        <p className={styles.whySubtitle}>We combine cutting-edge technology with proven expertise to deliver exceptional digital solutions.</p>
         <div className={styles.whyGrid}>
           <div className={styles.whyCard}>
             <div className={styles.whyIcon}><svg width="38" height="38" fill="none"><rect width="38" height="38" rx="10" fill="#f2dede" /><text x="19" y="25" textAnchor="middle" fontSize="22" fill="#b71c1c">{'</>'}</text></svg></div>
-            <div className={styles.whyCardTitle}>Expert Development</div>
-            <div className={styles.whyCardDesc}>Our team of experienced developers uses the latest technologies and best practices.</div>
+            <div className={styles.whyCardTitle}>Software Development</div>
+            <div className={styles.whyCardDesc}>Custom applications built with modern frameworks and scalable architecture.</div>
           </div>
           <div className={styles.whyCard}>
             <div className={styles.whyIcon}><svg width="38" height="38" fill="none"><rect width="38" height="38" rx="10" fill="#f2dede" /><text x="19" y="25" textAnchor="middle" fontSize="22" fill="#b71c1c">👤</text></svg></div>
-            <div className={styles.whyCardTitle}>Client-Focused Approach</div>
-            <div className={styles.whyCardDesc}>We work closely with you throughout the project to ensure your vision becomes reality.</div>
+            <div className={styles.whyCardTitle}>Cloud Solutions</div>
+            <div className={styles.whyCardDesc}>Secure, scalable cloud infrastructure and migration services.</div>
           </div>
           <div className={styles.whyCard}>
             <div className={styles.whyIcon}><svg width="38" height="38" fill="none"><rect width="38" height="38" rx="10" fill="#f2dede" /><text x="19" y="25" textAnchor="middle" fontSize="22" fill="#b71c1c">🏅</text></svg></div>
-            <div className={styles.whyCardTitle}>Proven Track Record</div>
-            <div className={styles.whyCardDesc}>Over 150 successful projects delivered across various industries in Nepal.</div>
+            <div className={styles.whyCardTitle}>Automation & IT Consulting</div>
+            <div className={styles.whyCardDesc}>Streamlined workflows and strategic technology consulting for business growth.</div>
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@ const Home = () => (
         <div className={styles.testimonialGrid}>
           <div className={styles.testimonialCard}>
             <div className={styles.testimonialText}>
-              "NepSYS transformed our school management completely. The ERP system is intuitive and has improved our efficiency tremendously."
+              "NEXA transformed our school management completely. The ERP system is intuitive and has improved our efficiency tremendously."
             </div>
             <div className={styles.testimonialAuthorRow}>
               <span className={styles.testimonialAvatar}>🧑‍🏫</span>
@@ -68,7 +68,7 @@ const Home = () => (
           </div>
           <div className={styles.testimonialCard}>
             <div className={styles.testimonialText}>
-              "The travel booking platform developed by NepSYS has increased our online bookings by 200%. Excellent work!"
+              "The travel booking platform developed by NEXA has increased our online bookings by 200%. Excellent work!"
             </div>
             <div className={styles.testimonialAuthorRow}>
               <span className={styles.testimonialAvatar}>👩‍💼</span>
@@ -95,7 +95,7 @@ const Home = () => (
       {/* Team Members Section */}
       <section className={styles.teamSection}>
         <h2 className={styles.teamTitle}>Meet Our Team</h2>
-        <p className={styles.teamSubtitle}>The people behind NepSYS' success</p>
+        <p className={styles.teamSubtitle}>The people behind NEXA's success</p>
         <div className={styles.teamGrid}>
           <div className={styles.teamCard}>
             <img className={styles.teamAvatar} src="https://randomuser.me/api/portraits/men/1.jpg" alt="Roshan Karki" />

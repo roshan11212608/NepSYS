@@ -9,7 +9,7 @@ const Portfolio = () => (
   <Header/>
   <div className={styles.portfolio}>
     <h2>Portfolio</h2>
-    <p>Showcase of our delivered projects: school apps, travel apps, and more.</p>
+    <p>Showcase of our delivered digital solutions: enterprise software, cloud platforms, and automated systems.</p>
   </div>
   <Footer/>
   </>

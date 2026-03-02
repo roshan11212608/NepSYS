@@ -5,14 +5,14 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.container}>
       <div className={styles.col}>
-        <a href="/" className={styles.logo} aria-label="NepSYS Home">
+        <a href="/" className={styles.logo} aria-label="NEXA Home">
               <img
                 src={require('./img/loo.png')}
-                alt="NepSYS Logo"
+                alt="NEXA Logo"
                 className={styles.logoImg}
                 height={48}
               />
-              <span className={styles.logoText}>NepSYS</span>
+              <span className={styles.logoText}>NEXA</span>
             </a>
         <p className={styles.desc}>
           Empowering businesses across Nepal with cutting-edge software solutions.<br />
@@ -50,12 +50,12 @@ const Footer = () => (
         <ul className={styles.contact}>
           <li><span role="img" aria-label="Location">📍</span> Kathmandu, Nepal</li>
           <li><span role="img" aria-label="Phone">📞</span> +977-1-4123456</li>
-          <li><span role="img" aria-label="Email">✉️</span> info@nepsys.com</li>
+          <li><span role="img" aria-label="Email">✉️</span> info@nexa.com</li>
         </ul>
       </div>
     </div>
     <div className={styles.bottom}>
-      &copy; {new Date().getFullYear()} NepSYS. All rights reserved. Built with excellence in Nepal.
+      &copy; {new Date().getFullYear()} NEXA. All rights reserved. Built with excellence in Nepal.
     </div>
   </footer>
 );

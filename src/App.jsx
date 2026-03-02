@@ -1,24 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
+import Landing from './pages/Landing/Landing';
 import Services from './pages/Services/Services';
-import Portfolio from './pages/Portfolio/Portfolio';
-import Training from './pages/Training/Training';
-import Blog from './pages/Blog/Blog';
-import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 import './styles/main.css';
 
 const App = () => (
   <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Landing />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/training" element={<Training />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </Router>
 );

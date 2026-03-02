@@ -67,12 +67,11 @@
   margin: 0 0 1.2rem 0;
   letter-spacing: 1.5px;
   line-height: 1.13;
-  color: #b71c1c;
-  background: linear-gradient(90deg, #b71c1c 60%, #7a1313 100%);
+  color: #2F80ED;
+  background: linear-gradient(90deg, #2F80ED 60%, #00C2FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   filter: drop-shadow(0 2px 8px #fff8);
   animation: heroTitlePop 1.1s cubic-bezier(.23,1.01,.32,1);
 }
@@ -246,7 +245,7 @@
 }
 
 
-/* Why Choose NepSYS Section */
+/* Why Choose NEXA Section */
 .whySection {
   background: #faf8f6;
   padding: 3rem 1rem 2.5rem 1rem;

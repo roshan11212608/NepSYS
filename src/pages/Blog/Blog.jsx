@@ -9,7 +9,7 @@ const Blog = () => (
   <Header/>
   <div className={styles.blog}>
     <h2>Blog & News</h2>
-    <p>Latest updates, news, and articles from NepSYS.</p>
+    <p>Latest updates, news, and articles from NEXA.</p>
   </div>
   <Footer/>
   </>
