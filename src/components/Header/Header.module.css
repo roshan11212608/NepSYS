@@ -150,7 +150,7 @@
   background: linear-gradient(135deg, #2F80ED, #00C2FF) !important;
   color: #FFFFFF !important;
   border: none !important;
-  padding: 0.85rem 1.75rem !important;
+  padding: 0.85rem 1.25rem !important;
   border-radius: 16px !important;
   font-size: 0.95rem !important;
   font-weight: 700 !important;
@@ -161,7 +161,10 @@
   box-shadow: 0 4px 15px rgba(47, 128, 237, 0.3) !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
-  display: inline-block !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
 }
 
 .ctaButton::before {
@@ -173,6 +176,16 @@
   height: 100% !important;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
   transition: left 0.6s ease !important;
+}
+
+.ctaButton svg {
+  width: 16px !important;
+  height: 16px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.ctaButton:hover svg {
+  transform: translateX(2px) !important;
 }
 
 .ctaButton::after {

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import logoImage from "./img/loo.png";
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -7,12 +8,12 @@ const Footer = () => (
       <div className={styles.col}>
         <a href="/" className={styles.logo} aria-label="NEXA Home">
           <img
-            src={require("./img/loo.png")}
+            src={logoImage}
             alt="NEXA Logo"
             className={styles.logoImg}
             height={48}
           />
-          <span className={styles.logoText}>NEXA_Nepal</span>
+          <span className={styles.logoText}></span>
         </a>
         <p className={styles.desc}>
           Empowering businesses across Nepal with cutting-edge software

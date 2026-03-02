@@ -27,7 +27,7 @@ const Header = () => {
             alt="NEXA Logo"
             className={styles.logoImg}
           />
-          <span className={styles.logoText}>NEXA</span>
+          {/* <span className={styles.logoText}>NEXA</span> */}
         </a>
 
         {/* Navigation */}
@@ -69,7 +69,12 @@ const Header = () => {
               <a href="/contact" className={styles.navLink} onClick={closeMenu}>Contact</a>
             </li>
             <li className={styles.navItem}>
-              <button className={styles.ctaButton} onClick={() => window.location.href='/contact'}>Start Your Project</button>
+              <button className={styles.ctaButton} onClick={() => window.location.href='/contact'} aria-label="Start Your Project">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10 5z"/>
+                  <path d="M2 17l10-5 10 5M2 12l10 5 10-5"/>
+                </svg>
+              </button>
             </li>
           </ul>
 
