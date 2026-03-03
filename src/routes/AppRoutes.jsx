@@ -21,9 +21,17 @@ import Login from '../pages/auth/Login/Login';
 import Register from '../pages/auth/Register/Register';
 
 // Dashboard Pages
-import DashboardHome from '../pages/dashboard/Home/Home';
-import Profile from '../pages/dashboard/Profile/Profile';
-import Settings from '../pages/dashboard/Settings/Settings';
+import Products from '../pages/dashboard/Products';
+import Clients from '../pages/dashboard/Clients';
+import Projects from '../pages/dashboard/Projects';
+import Billing from '../pages/dashboard/Billing';
+import Analytics from '../pages/dashboard/Analytics';
+import UsersManagement from '../pages/dashboard/Users';
+import Roles from '../pages/dashboard/Roles';
+import Integrations from '../pages/dashboard/Integrations';
+import ApiKeys from '../pages/dashboard/ApiKeys';
+import UserProfile from '../pages/dashboard/Profile';
+import CompanySettings from '../pages/dashboard/CompanySettings';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -36,7 +44,7 @@ const ProtectedRoute = ({ children }) => {
 const PublicRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
   
-  return isAuthenticated ? <Navigate to="/dashboard" replace /> : children;
+  return isAuthenticated ? <Navigate to="/sidebar" replace /> : children;
 };
 
 // Layout Wrapper
@@ -46,11 +54,6 @@ const Layout = ({ children }) => (
     <main>{children}</main>
     <Footer />
   </>
-);
-
-// Dashboard Layout (without header/footer for dashboard)
-const DashboardLayout = ({ children }) => (
-  <main className="dashboard-main">{children}</main>
 );
 
 const AppRoutes = () => {
@@ -112,28 +115,77 @@ const AppRoutes = () => {
         </PublicRoute>
       } />
 
-      {/* Dashboard Routes */}
-      <Route path="/dashboard" element={
+      {/* Sidebar Route */}
+      <Route path="/sidebar" element={
         <ProtectedRoute>
-          <DashboardLayout>
-            <DashboardHome />
-          </DashboardLayout>
+          <UserProfile />
+        </ProtectedRoute>
+      } />
+
+      {/* Dashboard Routes */}
+      <Route path="/dashboard/products" element={
+        <ProtectedRoute>
+          <Products />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/clients" element={
+        <ProtectedRoute>
+          <Clients />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/projects" element={
+        <ProtectedRoute>
+          <Projects />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/billing" element={
+        <ProtectedRoute>
+          <Billing />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/analytics" element={
+        <ProtectedRoute>
+          <Analytics />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/users" element={
+        <ProtectedRoute>
+          <UsersManagement />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/roles" element={
+        <ProtectedRoute>
+          <Roles />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/integrations" element={
+        <ProtectedRoute>
+          <Integrations />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/api-keys" element={
+        <ProtectedRoute>
+          <ApiKeys />
         </ProtectedRoute>
       } />
       
       <Route path="/dashboard/profile" element={
         <ProtectedRoute>
-          <DashboardLayout>
-            <Profile />
-          </DashboardLayout>
+          <UserProfile />
         </ProtectedRoute>
       } />
       
-      <Route path="/dashboard/settings" element={
+      <Route path="/dashboard/company-settings" element={
         <ProtectedRoute>
-          <DashboardLayout>
-            <Settings />
-          </DashboardLayout>
+          <CompanySettings />
         </ProtectedRoute>
       } />
 
