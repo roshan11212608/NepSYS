@@ -1,0 +1,198 @@
+/* Dashboard Home Styles */
+.dashboardContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcomeSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcomeTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcomeSubtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.statLabel {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.statChange {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.positive {
+  color: #28a745;
+}
+
+.negative {
+  color: #dc3545;
+}
+
+.contentSection {
+  margin-bottom: 3rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projectName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.projectStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.active {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+.completed {
+  background: rgba(13, 110, 253, 0.2);
+  color: #1e7e34;
+}
+
+.in-progress {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.planning {
+  background: rgba(108, 117, 125, 0.2);
+  color: #6c757d;
+}
+
+.projectProgress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  color: #AAB3C5;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.quickActions {
+  text-align: center;
+}
+
+.quickActionsTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.quickActionsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  min-width: 150px;
+}

@@ -1,0 +1,550 @@
+/* Process Page - Regular Theme */
+.process {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B1F3A 0%, #071426 100%);
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Process background pattern */
+.process::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(47, 128, 237, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 194, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(0deg, rgba(47, 128, 237, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 128, 237, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.processContainer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section */
+.processHero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.processHero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(47, 128, 237, 0.1), transparent, rgba(0, 194, 255, 0.1), transparent);
+  animation: rotate 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.processTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(47, 128, 237, 0.3));
+  position: relative;
+  z-index: 2;
+}
+
+.processSubtitle {
+  color: #AAB3C5;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* Process Steps Section */
+.processSteps {
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(47, 128, 237, 0.05) 50%, transparent 70%);
+  z-index: -1;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(47, 128, 237, 0.3));
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stepCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.stepCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover::before {
+  transform: translateX(0);
+}
+
+.stepCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(47, 128, 237, 0.3);
+  border-color: rgba(47, 128, 237, 0.4);
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.3);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover .stepNumber {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(47, 128, 237, 0.4);
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stepDescription {
+  color: #AAB3C5;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stepFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stepFeatures li {
+  color: #00C2FF;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.stepFeatures li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #2F80ED;
+}
+
+/* Process Timeline Section */
+.processTimeline {
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.processTimeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, transparent 30%, rgba(0, 194, 255, 0.05) 50%, transparent 70%);
+  z-index: -1;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #2F80ED, #00C2FF);
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineDot {
+  width: 20px;
+  height: 20px;
+  background: #00C2FF;
+  border: 3px solid #0B1F3A;
+  border-radius: 50%;
+  margin-right: 2rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.5);
+}
+
+.timelineContent {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(47, 128, 237, 0.3);
+  border-color: rgba(47, 128, 237, 0.4);
+}
+
+.timelineTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.timelineDesc {
+  color: #AAB3C5;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(7, 20, 38, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(47, 128, 237, 0.1), transparent, rgba(0, 194, 255, 0.1), transparent);
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaSubtitle {
+  color: #AAB3C5;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #2F80ED, #1E5CAF);
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(47, 128, 237, 0.4), 0 0 20px rgba(0, 194, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .processTitle {
+    font-size: 2rem;
+  }
+  
+  .processSubtitle {
+    font-size: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stepCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .timeline {
+    padding-left: 2rem;
+  }
+  
+  .timeline::before {
+    left: 10px;
+  }
+  
+  .timelineDot {
+    width: 15px;
+    height: 15px;
+    margin-right: 1.5rem;
+  }
+  
+  .timelineContent {
+    padding: 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .processHero,
+  .processSteps,
+  .processTimeline,
+  .ctaSection {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* New styles for updated Process page */
+.heroIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.processPurpose {
+  font-size: 1.5rem;
+  color: #00C2FF;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.processFlowTitle {
+  font-size: 1.8rem;
+  color: #2F80ED;
+  margin: 1.5rem 0 2rem;
+  font-weight: 600;
+}
+
+.stepSubItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.subItem {
+  background: rgba(47, 128, 237, 0.2);
+  border: 1px solid rgba(47, 128, 237, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding-left: 2rem;
+}
+
+.subItem::before {
+  content: '▸';
+  position: absolute;
+  left: 0.5rem;
+  color: #00C2FF;
+  font-weight: bold;
+}
+
+.subItem:hover {
+  background: rgba(47, 128, 237, 0.3);
+  transform: translateX(5px);
+  border-color: #00C2FF;
+}
+
+.timelineDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.timelineDetails span {
+  background: rgba(0, 194, 255, 0.1);
+  border: 1px solid rgba(0, 194, 255, 0.2);
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  color: #00C2FF;
+  transition: all 0.3s ease;
+}
+
+.timelineDetails span:hover {
+  background: rgba(0, 194, 255, 0.2);
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 480px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroIcon {
+    font-size: 3rem;
+  }
+  
+  .processPurpose {
+    font-size: 1.2rem;
+  }
+  
+  .processFlowTitle {
+    font-size: 1.4rem;
+  }
+  
+  .timelineDetails {
+    flex-direction: column;
+  }
+}

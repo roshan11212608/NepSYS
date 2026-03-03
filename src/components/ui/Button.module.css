@@ -1,0 +1,103 @@
+/* Button Component Styles */
+.button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* Variants */
+.primary {
+  background: linear-gradient(135deg, #2F80ED, #1E5CAF);
+  color: #FFFFFF;
+  border: 1px solid #2F80ED;
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1E5CAF, #2F80ED);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(47, 128, 237, 0.4);
+}
+
+.secondary {
+  background: transparent;
+  color: #2F80ED;
+  border: 2px solid #2F80ED;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #2F80ED;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.success {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: #FFFFFF;
+  border: 1px solid #28a745;
+}
+
+.warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+  border: 1px solid #ffc107;
+}
+
+.danger {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: #FFFFFF;
+  border: 1px solid #dc3545;
+}
+
+/* Sizes */
+.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* States */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.loading {
+  position: relative;
+  color: transparent;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

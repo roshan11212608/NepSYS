@@ -1,0 +1,74 @@
+/* Register Page Styles */
+.registerContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0B1F3A 0%, #071426 100%);
+  padding: 2rem;
+}
+
+.registerCard {
+  background: rgba(7, 20, 38, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.registerHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.registerTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #2F80ED, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.registerSubtitle {
+  color: #AAB3C5;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.registerButton {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.registerFooter {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.link {
+  color: #00C2FF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

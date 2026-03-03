@@ -1,24 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing/Landing';
-import Services from './pages/Services/Services';
-import About from './pages/About/About';
-import Process from './pages/Process/Process';
-import Tech from './pages/Tech/Tech';
-import Contact from './pages/Contact/Contact';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import AppRoutes from './routes/AppRoutes';
 import './styles/main.css';
 
-const App = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/process" element={<Process />} />
-      <Route path="/tech" element={<Tech />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  </Router>
-);
+const App = () => {
+  return (
+    <Router>
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
+    </Router>
+  );
+};
 
 export default App;
