@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
 import { Mail, MessageSquare, Clock, User, ExternalLink, Trash2, Archive, Star } from 'lucide-react';
 
