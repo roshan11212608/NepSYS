@@ -1,7 +1,7 @@
 // App Routes - Centralized routing configuration
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../services/modules/auth';
 
 // Layout Components
 import Header from '../components/layout/Header/Header';
@@ -21,17 +21,19 @@ import Login from '../pages/auth/Login/Login';
 import Register from '../pages/auth/Register/Register';
 
 // Dashboard Pages
-import Products from '../pages/dashboard/Products';
-import Clients from '../pages/dashboard/Clients';
-import Projects from '../pages/dashboard/Projects';
-import Billing from '../pages/dashboard/Billing';
-import Analytics from '../pages/dashboard/Analytics';
-import UsersManagement from '../pages/dashboard/Users';
-import Roles from '../pages/dashboard/Roles';
-import Integrations from '../pages/dashboard/Integrations';
-import ApiKeys from '../pages/dashboard/ApiKeys';
-import UserProfile from '../pages/dashboard/Profile';
-import CompanySettings from '../pages/dashboard/CompanySettings';
+import DashboardHome from '../pages/module/Home/Home';
+import Products from '../pages/module/Products/Products';
+import Clients from '../pages/module/Clients/Clients';
+import Projects from '../pages/module/Projects/Projects';
+import Billing from '../pages/module/Billing/Billing';
+import Analytics from '../pages/module/Analytics/Analytics';
+import Inbox from '../pages/module/Inbox/Inbox';
+import UsersManagement from '../pages/module/Users/Users';
+import Roles from '../pages/module/Roles/Roles';
+import Integrations from '../pages/module/Integrations/Integrations';
+import ApiKeys from '../pages/module/ApiKeys/ApiKeys';
+import UserProfile from '../pages/module/Profile/Profile';
+import CompanySettings from '../pages/module/CompanySettings/CompanySettings';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -44,7 +46,7 @@ const ProtectedRoute = ({ children }) => {
 const PublicRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
   
-  return isAuthenticated ? <Navigate to="/sidebar" replace /> : children;
+  return isAuthenticated ? <Navigate to="/dashboard/home" replace /> : children;
 };
 
 // Layout Wrapper
@@ -115,10 +117,24 @@ const AppRoutes = () => {
         </PublicRoute>
       } />
 
+      {/* Dashboard Home Route */}
+      <Route path="/dashboard/home" element={
+        <ProtectedRoute>
+          <DashboardHome />
+        </ProtectedRoute>
+      } />
+
+      {/* Dashboard Root Route */}
+      <Route path="/dashboard" element={
+        <ProtectedRoute>
+          <DashboardHome />
+        </ProtectedRoute>
+      } />
+
       {/* Sidebar Route */}
       <Route path="/sidebar" element={
         <ProtectedRoute>
-          <UserProfile />
+          <DashboardHome />
         </ProtectedRoute>
       } />
 
@@ -150,6 +166,12 @@ const AppRoutes = () => {
       <Route path="/dashboard/analytics" element={
         <ProtectedRoute>
           <Analytics />
+        </ProtectedRoute>
+      } />
+      
+      <Route path="/dashboard/inbox" element={
+        <ProtectedRoute>
+          <Inbox />
         </ProtectedRoute>
       } />
       

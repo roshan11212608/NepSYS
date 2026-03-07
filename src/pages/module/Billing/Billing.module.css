@@ -1,0 +1,219 @@
+/* Billing Dashboard Styles */
+.billingContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+.billingHeader {
+  margin-bottom: 2rem;
+}
+
+.billingTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.billingSubtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.billingOverview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.overviewCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.overviewCard:hover {
+  border-color: #2F80ED;
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.2);
+}
+
+.overviewValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2F80ED;
+  margin-bottom: 0.5rem;
+}
+
+.overviewLabel {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.invoicesSection {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.invoicesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoicesTable th {
+  background: rgba(47, 128, 237, 0.1);
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(47, 128, 237, 0.2);
+}
+
+.invoicesTable td {
+  color: #F8FAFC;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.invoicesTable tr:hover {
+  background: rgba(47, 128, 237, 0.05);
+}
+
+.invoiceStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.statusPaid {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+.statusPending {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.statusOverdue {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+.paymentMethods {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.methodsGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.methodCard {
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.methodCard:hover {
+  border-color: #2F80ED;
+  background: rgba(47, 128, 237, 0.15);
+}
+
+.methodInfo {
+  flex: 1;
+}
+
+.methodType {
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.methodDetails {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+}
+
+.methodActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.3);
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  background: rgba(47, 128, 237, 0.2);
+  border-color: #2F80ED;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .billingContainer {
+    padding: 1rem;
+  }
+  
+  .billingOverview {
+    grid-template-columns: 1fr;
+  }
+  
+  .invoicesTable {
+    font-size: 0.8rem;
+  }
+  
+  .invoicesTable th,
+  .invoicesTable td {
+    padding: 0.5rem;
+  }
+  
+  .methodCard {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .methodActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

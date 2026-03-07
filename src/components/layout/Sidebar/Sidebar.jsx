@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '../../../services/modules/auth';
 import { 
   Menu, 
   X, 
-  LayoutDashboard,
+  Home,
   Package,
   Users,
   FolderOpen,
@@ -15,7 +15,8 @@ import {
   Plug,
   UserCircle,
   Building,
-  LogOut
+  LogOut,
+  Mail
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -28,12 +29,13 @@ const Sidebar = () => {
     {
       section: 'Main',
       items: [
-        { icon: LayoutDashboard, label: 'Dashboard', path: '/sidebar' },
+        { icon: Home, label: 'Home', path: '/dashboard/home' },
         { icon: Package, label: 'Products', path: '/dashboard/products' },
         { icon: Users, label: 'Clients', path: '/dashboard/clients' },
         { icon: FolderOpen, label: 'Projects', path: '/dashboard/projects' },
         { icon: CreditCard, label: 'Billing', path: '/dashboard/billing' },
-        { icon: BarChart3, label: 'Analytics', path: '/dashboard/analytics' }
+        { icon: BarChart3, label: 'Analytics', path: '/dashboard/analytics' },
+        { icon: Mail, label: 'Inbox', path: '/dashboard/inbox' }
       ]
     },
     {

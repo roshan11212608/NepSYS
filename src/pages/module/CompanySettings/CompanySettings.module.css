@@ -1,0 +1,280 @@
+/* Company Settings Dashboard Styles */
+.companySettingsContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+.settingsHeader {
+  margin-bottom: 2rem;
+}
+
+.settingsTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.settingsSubtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.settingsGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+.settingsSection {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formInput {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #2F80ED;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.formInput::placeholder {
+  color: #AAB3C5;
+}
+
+.formTextarea {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-family: 'Inter, sans-serif';
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: #2F80ED;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.formSelect {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formSelect:focus {
+  outline: none;
+  border-color: #2F80ED;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  border: none;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.3);
+}
+
+.cancelButton {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  border-color: #2F80ED;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.uploadArea {
+  border: 2px dashed rgba(47, 128, 237, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.uploadArea:hover {
+  border-color: #2F80ED;
+  background: rgba(47, 128, 237, 0.05);
+}
+
+.uploadArea.dragover {
+  border-color: #2F80ED;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.uploadIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #2F80ED;
+}
+
+.uploadText {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.uploadSubtext {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+}
+
+.notificationSettings {
+  display: grid;
+  gap: 1rem;
+}
+
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(47, 128, 237, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(47, 128, 237, 0.1);
+}
+
+.notificationInfo {
+  flex: 1;
+}
+
+.notificationTitle {
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.notificationDescription {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: rgba(169, 169, 169, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleSwitch.active {
+  background: #2F80ED;
+}
+
+.toggleSwitch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggleSwitch.active::after {
+  left: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .companySettingsContainer {
+    padding: 1rem;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .notificationItem {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}

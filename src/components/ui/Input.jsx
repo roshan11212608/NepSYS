@@ -11,6 +11,7 @@ const Input = ({
   error, 
   disabled = false, 
   required = false, 
+  name, // Add name prop
   className = '',
   ...props 
 }) => {
@@ -37,6 +38,17 @@ const Input = ({
         onChange={onChange}
         disabled={disabled}
         required={required}
+        name={name} // Pass name prop to input
+        style={{
+          width: '100%',
+          padding: '0.5rem 0.75rem',
+          border: '1px solid #D1D5DB',
+          borderRadius: '6px',
+          fontSize: '0.9rem',
+          background: '#FFFFFF',
+          color: '#1F2937',
+          boxSizing: 'border-box'
+        }}
         {...props}
       />
       {error && (

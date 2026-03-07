@@ -1,0 +1,174 @@
+/* API Keys Dashboard Styles */
+.apiKeysContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+.apiKeysHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.apiKeysTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.apiKeysSubtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.createButton {
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  border: none;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.createButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.3);
+}
+
+.keysGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.keyCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.keyCard:hover {
+  border-color: #2F80ED;
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.2);
+}
+
+.keyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.keyName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.keyStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.statusActive {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+}
+
+.statusInactive {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+.keyDetails {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detailLabel {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.detailValue {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+.keyActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.actionButton {
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.3);
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  background: rgba(47, 128, 237, 0.2);
+  border-color: #2F80ED;
+}
+
+.actionButton.danger {
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.actionButton.danger:hover {
+  background: rgba(220, 53, 69, 0.2);
+  border-color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apiKeysContainer {
+    padding: 1rem;
+  }
+  
+  .apiKeysHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .keyHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .keyActions {
+    flex-direction: column;
+  }
+}

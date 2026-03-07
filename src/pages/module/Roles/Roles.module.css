@@ -1,0 +1,458 @@
+/* Roles Dashboard Styles */
+.rolesContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+.rolesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rolesTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.rolesSubtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.addButton {
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  border: none;
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.3);
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.roleCard {
+  background: rgba(7, 20, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.roleCard:hover {
+  border-color: #2F80ED;
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.2);
+  transform: translateY(-2px);
+}
+
+.roleHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roleName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.roleDescription {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.roleContent {
+  padding: 1.5rem;
+}
+
+.permissionsSection {
+  margin-bottom: 1.5rem;
+}
+
+.sectionLabel {
+  color: #AAB3C5;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.permissionsList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.permissionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(47, 128, 237, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(47, 128, 237, 0.1);
+  transition: all 0.3s ease;
+}
+
+.permissionItem:hover {
+  background: rgba(47, 128, 237, 0.1);
+  border-color: rgba(47, 128, 237, 0.2);
+}
+
+.permissionIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: rgba(47, 128, 237, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2F80ED;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.permissionName {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.permissionDescription {
+  color: #AAB3C5;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.usersSection {
+  margin-bottom: 1.5rem;
+}
+
+.usersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.userChip {
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.userChip:hover {
+  background: rgba(47, 128, 237, 0.2);
+  border-color: #2F80ED;
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.userName {
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.userCount {
+  background: rgba(169, 169, 169, 0.2);
+  color: #AAB3C5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.roleActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.3);
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.actionButton:hover {
+  background: rgba(47, 128, 237, 0.2);
+  border-color: #2F80ED;
+}
+
+.actionButton.danger {
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.actionButton.danger:hover {
+  background: rgba(220, 53, 69, 0.2);
+  border-color: #dc3545;
+}
+
+.roleModal {
+  background: rgba(7, 20, 38, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.modalTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  color: #AAB3C5;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formInput {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #2F80ED;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.formInput::placeholder {
+  color: #AAB3C5;
+}
+
+.formTextarea {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-family: 'Inter, sans-serif';
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: #2F80ED;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.permissionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.permissionCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(47, 128, 237, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(47, 128, 237, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.permissionCheckbox:hover {
+  background: rgba(47, 128, 237, 0.1);
+  border-color: rgba(47, 128, 237, 0.2);
+}
+
+.permissionCheckbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2F80ED;
+}
+
+.permissionLabel {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.userSelector {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.userOption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.userOption:hover {
+  background: rgba(47, 128, 237, 0.1);
+}
+
+.userOption input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2F80ED;
+}
+
+.userOptionInfo {
+  flex: 1;
+}
+
+.userOptionName {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.userOptionEmail {
+  color: #AAB3C5;
+  font-size: 0.8rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #2F80ED, #00C2FF);
+  border: none;
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(47, 128, 237, 0.3);
+}
+
+.cancelButton {
+  background: rgba(7, 20, 38, 0.8);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  border-color: #2F80ED;
+  background: rgba(47, 128, 237, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rolesContainer {
+    padding: 1rem;
+  }
+  
+  .rolesHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .rolesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .permissionsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .roleActions {
+    flex-direction: column;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+  }
+}
