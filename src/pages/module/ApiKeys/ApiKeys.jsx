@@ -1,23 +1,20 @@
 import React from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './ApiKeys.module.css';
 
 const ApiKeys = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.apiKeysContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-          API Keys
-        </h1>
-        <p style={{ color: '#CBD5E1' }}>
-          Manage API keys and developer access
-        </p>
+      <main className={styles.apiKeysMain}>
+        <div className={styles.apiKeysContent}>
+          <h1 className={styles.apiKeysTitle}>
+            API Keys
+          </h1>
+          <p className={styles.apiKeysSubtitle}>
+            Manage API keys and developer access
+          </p>
+        </div>
       </main>
     </div>
   );

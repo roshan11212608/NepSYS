@@ -1,0 +1,78 @@
+/* Responsive Module Template - Apply to all remaining modules */
+
+/* Container Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+}
+
+.main {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+/* Typography */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #AAB3C5;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .main {
+    padding: 0.75rem;
+  }
+  
+  .content {
+    padding: 0.75rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+  }
+  
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}

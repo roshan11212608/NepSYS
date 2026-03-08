@@ -1,10 +1,137 @@
 /* Projects Dashboard Styles */
 .projectsContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+}
+
+.projectsMain {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+.projectsContent {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   color: #F8FAFC;
   font-family: 'Inter, sans-serif';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectsMain {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  
+  .projectsHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .projectsTitle {
+    font-size: 1.5rem;
+  }
+  
+  .projectsSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .addButton {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .searchFilter {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .projectCard {
+    border-radius: 12px;
+  }
+  
+  .projectActions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+  
+  .statsOverview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .statCard {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .projectsMain {
+    padding: 0.75rem;
+  }
+  
+  .projectsContent {
+    padding: 1rem;
+  }
+  
+  .projectsTitle {
+    font-size: 1.25rem;
+  }
+  
+  .projectsSubtitle {
+    font-size: 0.85rem;
+  }
+  
+  .projectCard {
+    border-radius: 8px;
+  }
+  
+  .projectContent {
+    padding: 1rem;
+  }
+  
+  .projectName {
+    font-size: 1rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.85rem;
+  }
+  
+  .actionButton {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+  
+  .statCard {
+    padding: 0.875rem;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
+  }
 }
 
 .projectsHeader {

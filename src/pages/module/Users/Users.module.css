@@ -1,10 +1,37 @@
 /* Users Dashboard Styles */
 .usersContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+}
+
+.usersMain {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+.usersContent {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   color: #F8FAFC;
   font-family: 'Inter, sans-serif';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .usersMain {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  
+  .usersContent {
+    padding: 1rem;
+  }
 }
 
 .usersHeader {

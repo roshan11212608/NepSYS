@@ -1,10 +1,119 @@
 /* Clients Dashboard Styles */
 .clientsContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+}
+
+.clientsMain {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+.clientsContent {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   color: #F8FAFC;
   font-family: 'Inter, sans-serif';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clientsMain {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  
+  .clientsHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .clientsTitle {
+    font-size: 1.5rem;
+  }
+  
+  .clientsSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .addButton {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .searchFilter {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .clientsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .clientCard {
+    border-radius: 12px;
+  }
+  
+  .clientActions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .clientsMain {
+    padding: 0.75rem;
+  }
+  
+  .clientsContent {
+    padding: 1rem;
+  }
+  
+  .clientsTitle {
+    font-size: 1.25rem;
+  }
+  
+  .clientsSubtitle {
+    font-size: 0.85rem;
+  }
+  
+  .clientCard {
+    border-radius: 8px;
+  }
+  
+  .clientContent {
+    padding: 1rem;
+  }
+  
+  .clientName {
+    font-size: 1rem;
+  }
+  
+  .clientEmail {
+    font-size: 0.85rem;
+  }
+  
+  .actionButton {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
 }
 
 .clientsHeader {

@@ -54,15 +54,9 @@ const Home = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.dashboardLayout}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
+      <main className={styles.mainContent}>
         <div className={styles.homeContainer}>
           {/* Welcome Header */}
           <div className={styles.welcomeHeader}>

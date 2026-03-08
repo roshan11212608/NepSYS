@@ -1,23 +1,20 @@
 import React from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './Users.module.css';
 
 const UsersManagement = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.usersContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-          Users
-        </h1>
-        <p style={{ color: '#CBD5E1' }}>
-          Manage user accounts and permissions
-        </p>
+      <main className={styles.usersMain}>
+        <div className={styles.usersContent}>
+          <h1 className={styles.usersTitle}>
+            Users
+          </h1>
+          <p className={styles.usersSubtitle}>
+            Manage user accounts and permissions
+          </p>
+        </div>
       </main>
     </div>
   );

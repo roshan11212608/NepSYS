@@ -1,7 +1,33 @@
-/* Home Dashboard Styles - With Sidebar Layout */
+/* Home Dashboard Styles - Mobile First Responsive Design */
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+  position: relative;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+}
+
 .homeContainer {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .loadingState {
@@ -258,10 +284,15 @@
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Enhanced Mobile Responsive Design */
+@media (max-width: 1200px) {
+  .mainContent {
+    padding: 1.5rem;
+  }
+  
   .detailsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .quickActions {
@@ -269,22 +300,376 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 1.25rem;
+  }
+  
+  .welcomeHeader {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .detailsGrid {
+    gap: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .homeContainer {
+  .mainContent {
+    margin-left: 0;
     padding: 1rem;
+  }
+  
+  .homeContainer {
+    padding: 0;
   }
   
   .welcomeHeader {
     flex-direction: column;
     text-align: center;
+    padding: 1.25rem;
     gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .userAvatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
   }
   
   .greeting {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.1;
+  }
+  
+  .welcomeSubtext {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  
+  .roleBadge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .detailCard {
+    border-radius: 12px;
+  }
+  
+  .cardHeader {
+    padding: 1rem;
+  }
+  
+  .cardHeader h3 {
+    font-size: 1rem;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .detailRow {
+    padding: 0.5rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .detailLabel {
+    font-size: 0.8rem;
+  }
+  
+  .detailValue {
+    font-size: 0.9rem;
+  }
+  
+  .quickActions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.875rem;
+    font-size: 0.85rem;
+  }
+  
+  .activitySection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionHeader {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 1.1rem;
   }
   
   .activityGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .activityCard {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .activityIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .activityInfo h4 {
+    font-size: 1rem;
+  }
+  
+  .activityInfo p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 0.75rem;
+  }
+  
+  .welcomeHeader {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .userAvatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  
+  .greeting {
+    font-size: clamp(1.25rem, 4.5vw, 1.5rem);
+  }
+  
+  .welcomeSubtext {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+  }
+  
+  .roleBadge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .detailsGrid {
+    gap: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cardHeader {
+    padding: 0.875rem;
+  }
+  
+  .cardContent {
+    padding: 0.875rem;
+  }
+  
+  .detailRow {
+    padding: 0.4rem 0;
+  }
+  
+  .detailLabel {
+    font-size: 0.75rem;
+  }
+  
+  .detailValue {
+    font-size: 0.85rem;
+  }
+  
+  .roleTag, .statusActive {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .actionButton {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .sectionHeader {
+    padding: 0.875rem;
+  }
+  
+  .sectionHeader h3 {
+    font-size: 1rem;
+  }
+  
+  .activityCard {
+    padding: 0.875rem;
+  }
+  
+  .activityIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
+  
+  .activityInfo h4 {
+    font-size: 0.95rem;
+  }
+  
+  .activityInfo p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .mainContent {
+    padding: 0.5rem;
+  }
+  
+  .welcomeHeader {
+    padding: 0.75rem;
+  }
+  
+  .greeting {
+    font-size: 1.1rem;
+  }
+  
+  .welcomeSubtext {
+    font-size: 0.8rem;
+  }
+  
+  .detailsGrid {
+    gap: 0.75rem;
+  }
+  
+  .cardHeader, .cardContent {
+    padding: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.625rem;
+    font-size: 0.75rem;
+  }
+  
+  .activityCard {
+    padding: 0.75rem;
+  }
+}
+
+/* Landscape orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .welcomeHeader {
+    flex-direction: row;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  .userAvatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .greeting {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+  
+  .welcomeSubtext {
+    font-size: 0.85rem;
+  }
+}
+
+/* Component-level Mobile Enhancements */
+@media (max-width: 768px) {
+  .detailCard {
+    border-radius: 12px;
+  }
+  
+  .actionButton {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+  
+  .activityCard {
+    border-radius: 12px;
+  }
+  
+  .activityIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+  
+  .activityInfo h4 {
+    font-size: 1rem;
+  }
+  
+  .activityInfo p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .detailCard {
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .actionButton {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+  
+  .activityCard {
+    border-radius: 8px;
+    padding: 0.75rem;
+  }
+  
+  .activityIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .activityInfo h4 {
+    font-size: 0.9rem;
+  }
+  
+  .activityInfo p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .detailCard:hover {
+    transform: none;
+  }
+  
+  .actionButton:hover {
+    transform: none;
+  }
+  
+  .actionButton:active {
+    transform: scale(0.98);
+  }
+  
+  .activityCard:hover {
+    transform: none;
+  }
+  
+  .activityCard:active {
+    transform: scale(0.98);
   }
 }

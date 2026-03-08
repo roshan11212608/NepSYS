@@ -1,5 +1,6 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './Inbox.module.css';
 import { Mail, MessageSquare, Clock, User, ExternalLink, Trash2, Archive, Star } from 'lucide-react';
 
 const Inbox = () => {
@@ -93,24 +94,18 @@ const Inbox = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.inboxContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+      <main className={styles.inboxMain}>
+        <div className={styles.inboxContent}>
           {/* Header */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+          <div className={styles.inboxHeader}>
             <div>
-              <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <h1 className={styles.inboxTitle}>
                 <Mail size={32} style={{ color: '#00A67E' }} />
                 Inbox
               </h1>
-              <p style={{ color: '#CBD5E1' }}>
+              <p className={styles.inboxSubtitle}>
                 Manage messages and inquiries from website visitors
               </p>
             </div>

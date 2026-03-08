@@ -11,6 +11,15 @@
   padding: 2rem;
   color: #F8FAFC;
   font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .productsMain {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
 }
 
 .productsContent {
@@ -175,6 +184,7 @@
   margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -444,21 +454,100 @@
   
   .productsGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .productCard {
+    border-radius: 12px;
   }
   
   .productActions {
     flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    font-size: 0.9rem;
   }
   
   .statsOverview {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .statCard {
+    padding: 1rem;
+    border-radius: 12px;
   }
   
   .formGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .modalActions {
     flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .saveButton, .cancelButton {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .productsContainer {
+    padding: 0.75rem;
+  }
+  
+  .productsContent {
+    padding: 1rem;
+  }
+  
+  .productsTitle {
+    font-size: 1.5rem;
+  }
+  
+  .productsSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .productCard {
+    border-radius: 8px;
+  }
+  
+  .productImage {
+    height: 160px;
+    font-size: 2rem;
+  }
+  
+  .productContent {
+    padding: 1rem;
+  }
+  
+  .productName {
+    font-size: 1rem;
+  }
+  
+  .productDescription {
+    font-size: 0.85rem;
+  }
+  
+  .actionButton {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+  
+  .statCard {
+    padding: 0.875rem;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
   }
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../services/modules/auth';
 import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
+import Sidebar from '../../../components/layout/Sidebar/Sidebar';
 import styles from './Profile.module.css';
 
 const Profile = () => {
@@ -105,7 +106,10 @@ const Profile = () => {
 
   return (
     <div className={styles.profileContainer}>
-      {/* Welcome Header */}
+      <Sidebar />
+      <main className={styles.profileMain}>
+        <div className={styles.profileContent}>
+          {/* Welcome Header */}
       <div className={styles.welcomeHeader}>
         <div className={styles.userAvatar}>
           <span className={styles.avatarText}>{getInitials()}</span>
@@ -365,6 +369,8 @@ const Profile = () => {
           </Button>
         </div>
       </div>
+        </div>
+      </main>
     </div>
   );
 };

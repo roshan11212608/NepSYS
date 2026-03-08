@@ -1,23 +1,20 @@
 import React from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './Clients.module.css';
 
 const Clients = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.clientsContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-          Clients
-        </h1>
-        <p style={{ color: '#CBD5E1' }}>
-          Manage your client relationships and projects
-        </p>
+      <main className={styles.clientsMain}>
+        <div className={styles.clientsContent}>
+          <h1 className={styles.clientsTitle}>
+            Clients
+          </h1>
+          <p className={styles.clientsSubtitle}>
+            Manage your client relationships and projects
+          </p>
+        </div>
       </main>
     </div>
   );

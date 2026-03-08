@@ -1,23 +1,20 @@
 import React from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './Analytics.module.css';
 
 const Analytics = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.analyticsContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-          Analytics
-        </h1>
-        <p style={{ color: '#CBD5E1' }}>
-          View detailed analytics and reports
-        </p>
+      <main className={styles.analyticsMain}>
+        <div className={styles.analyticsContent}>
+          <h1 className={styles.analyticsTitle}>
+            Analytics
+          </h1>
+          <p className={styles.analyticsSubtitle}>
+            View detailed analytics and reports
+          </p>
+        </div>
       </main>
     </div>
   );

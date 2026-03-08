@@ -1,23 +1,20 @@
 import React from 'react';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
+import styles from './Integrations.module.css';
 
 const Integrations = () => {
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#0F172A' }}>
+    <div className={styles.integrationsContainer}>
       <Sidebar />
-      <main style={{ 
-        marginLeft: '280px', 
-        flex: 1, 
-        padding: '2rem',
-        color: '#F8FAFC',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '1rem' }}>
-          Integrations
-        </h1>
-        <p style={{ color: '#CBD5E1' }}>
-          Manage third-party integrations and connections
-        </p>
+      <main className={styles.integrationsMain}>
+        <div className={styles.integrationsContent}>
+          <h1 className={styles.integrationsTitle}>
+            Integrations
+          </h1>
+          <p className={styles.integrationsSubtitle}>
+            Connect with third-party services and APIs
+          </p>
+        </div>
       </main>
     </div>
   );

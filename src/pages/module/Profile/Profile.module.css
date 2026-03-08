@@ -1,3 +1,50 @@
+/* Profile Container Layout */
+.profileContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #0F172A;
+}
+
+.profileMain {
+  margin-left: 280px;
+  flex: 1;
+  padding: 2rem;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+  transition: margin-left 0.3s ease;
+}
+
+.profileContent {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #F8FAFC;
+  font-family: 'Inter, sans-serif';
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileMain {
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+  
+  .profileContent {
+    padding: 1rem;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .profileMain {
+    padding: 0.75rem;
+  }
+  
+  .profileContent {
+    padding: 0.75rem;
+  }
+}
+
 /* Welcome Dashboard Styles */
 .welcomeHeader {
   display: flex;
